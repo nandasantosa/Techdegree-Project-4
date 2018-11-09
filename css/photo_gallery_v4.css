@@ -159,6 +159,7 @@ p{
 
 img.hover-shadow {
   transition: 0.3s;
+  padding: 10px;
 }
 
 .hover-shadow:hover {
