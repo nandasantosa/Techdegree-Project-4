@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Photo Galleries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/photo_gallery_v4.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+   <header>
+    <input type="text" id="myInput" placeholder="Search..." >
+   </header>
+
+     <div class="row">
+      <ul id="myList">
+            <li><img src="./photos/thumbnails/01.jpg" alt="Hay Bales" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"><p>Hay Bales</p></li>
+            <li><img src="./photos/thumbnails/02.jpg" alt="Lake" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"><p>Lake</p></li>
+            <li><img src="./photos/thumbnails/03.jpg" alt="Mountain" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"><p>Mountain</p></li>
+            <li><img src="./photos/thumbnails/04.jpg" alt="Iceberg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"><p>Iceberg</p></li>
+            <li><img src="./photos/thumbnails/05.jpg" alt="Desert" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"><p>Desert</p></li>
+            <li><img src="./photos/thumbnails/06.jpg" alt="Fall" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"><p>Fall></p></li>
+            <li><img src="./photos/thumbnails/07.jpg" alt="Plantation" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"><p>Plantation</p></li>
+            <li><img src="./photos/thumbnails/08.jpg" alt="Dunes" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"><p>Dunes</p></li>
+            <li><img src="./photos/thumbnails/09.jpg" alt="Countryside Lane" onclick="openModal();currentSlide(9)" class="hover-shadow cursor"><p>Countryside lane</p></li>
+            <li><img src="./photos/thumbnails/10.jpg" alt="Sunset" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"><p>Sunset</p></li>
+            <li><img src="./photos/thumbnails/11.jpg" alt="Cave" onclick="openModal();currentSlide(11)" class="hover-shadow cursor"><p>Cave</p></li>
+            <li><img src="./photos/thumbnails/12.jpg" alt="Bluebells" onclick="openModal();currentSlide(12)" class="hover-shadow cursor"><p>Bluebells</p></li>
+      </ul>
+     </div>
+
+      <div id="myModal" class="modal">
+       <span class="close cursor" onclick="closeModal()">&times;</span>
+       <div class="modal-content">
+
+       <div class="mySlides">
+         <div class="numbertext">1 / 12</div>
+         <div class="description">I love hay bales. Took this snap on a drive through the countryside past some straw fields.</div>
+         <img src="./photos/01.jpg" style="width:100%" alt="hay bales">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">2 / 12</div>
+         <div class="description">The lake was so calm today. We had a great view of the snow on the mountains from here.</div>
+         <img src="./photos/02.jpg" style="width:100%" alt="lake">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">3 / 12</div>
+         <div class="description">I hiked to the top of the mountain and got this picture of the canyon and trees below.</div>
+         <img src="./photos/03.jpg" style="width:100%" alt="mountain">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">4 / 12</div>
+         <div class="description">It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</div>
+         <img src="./photos/04.jpg" style="width:100%" alt="iceberg">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">5 / 12</div>
+         <div class="description">The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</div>
+         <img src="./photos/05.jpg" style="width:100%" alt="desert">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">6 / 12</div>
+         <div class="description">Fall is coming, I love when the leaves on the trees start to change color.</div>
+         <img src="./photos/06.jpg" style="width:100%" alt="fall">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">7 / 12</div>
+         <div class="description">I drove past this plantation yesterday, everything is so green!</div>
+         <img src="./photos/07.jpg" style="width:100%" alt="plantation">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">8 / 12</div>
+         <div class="description">"My summer vacation to the Oregon Coast. I love the sandy dunes!</div>
+         <img src="./photos/08.jpg" style="width:100%" alt="dunes">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">9 / 12</div>
+         <div class="description">We enjoyed a quiet stroll down this countryside lane.</div>
+         <img src="./photos/09.jpg" style="width:100%" alt="countryside">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">10 / 12</div>
+         <div class="description">Sunset at the coast! The sky turned a lovely shade of orange.</div>
+         <img src="./photos/10.jpg" style="width:100%" alt="sunset">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">11 / 12</div>
+         <div class="description">I did a tour of a cave today and the view of the landscape below was breathtaking.</div>
+         <img src="./photos/11.jpg" style="width:100%" alt="cave">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">12 / 12</div>
+         <div class="description">I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</div>
+         <img src="./photos/12.jpg" style="width:100%" alt="bluebells">
+       </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./javascript/finallightbox.js"></script>
+    <script src="./jquery/searchquery.js"></script>
+
+</body>
+ </html>
